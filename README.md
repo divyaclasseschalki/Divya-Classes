@@ -119,7 +119,7 @@ footer{background:#041f3d;color:#bcd1e6;padding:25px 0}.foot{display:flex;justif
 <!-- Script for Google Apps Script Integration -->
 <script>
   // Updated Google Script URL
-  const scriptURL = "https://script.google.com/macros/s/AKfycbwkYP_7yANuzFYIBB9LdAvG0bXudeoIjBnQ6O_pKoxHJWApD8cZ0UDhD1xMedIXXVJrsg/exec";
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwS3jHCkA94y4ArhVei_wYNzuNqGicWqus1R7j-kX2pmWHNqwEKVq9VBOIeJN6_KNgIIQ/exec";
 </script>
 
 </body>
