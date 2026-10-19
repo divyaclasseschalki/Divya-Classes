@@ -1,1 +1,356 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divya Classes - Chalki, Daulatpur, Begusarai</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --primary-dark: #1557b0;
+      --bg-color: #f8f9fa;
+      --text-color: #333;
+      --white: #ffffff;
+      --gray: #e0e0e0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+    
+    header { background: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+    .logo { font-size: 22px; font-weight: bold; color: var(--primary); }
+    .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; cursor: pointer; }
+    .nav-links a:hover { color: var(--primary); }
+    .admin-btn { background: var(--primary); color: white; padding: 8px 15px; border-radius: 4px; border: none; cursor: pointer; }
+
+    .main-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .hero-section { background: linear-gradient(135deg, #1a73e8, #4285f4); color: white; padding: 40px; border-radius: 8px; text-align: center; margin-bottom: 30px; }
+    .hero-section h1 { font-size: 32px; margin-bottom: 10px; }
+
+    .card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px; }
+    .card h2 { margin-bottom: 15px; color: var(--primary); }
+
+    /* Modal Styling */
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000; }
+    .modal-content { background: white; padding: 30px; border-radius: 8px; width: 100%; max-width: 400px; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .close-btn { position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer; color: #777; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+    .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid var(--gray); border-radius: 4px; }
+    .btn-submit { width: 100%; background: var(--primary); color: white; border: none; padding: 10px; border-radius: 4px; font-size: 16px; cursor: pointer; }
+    .btn-submit:hover { background: var(--primary-dark); }
+
+    /* File Manager Panel */
+    .file-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid var(--gray); }
+    .file-actions button { margin-left: 5px; padding: 5px 10px; cursor: pointer; }
+    
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">DIVYA Classes</div>
+      <ul class="nav-links">
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('test')">Online Test</a></li>
+        <li><button class="admin-btn" onclick="openLoginModal()">Admin Login</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- HOME SECTION -->
+    <div id="homeSection" class="section">
+      <div class="hero-section">
+        <h1>Divya Classes - Chalki, Daulatpur, Begusarai</h1>
+        <p>Mathematics & Science Coaching for Classes 9 & 10 (CBSE Pattern)</p>
+      </div>
+      <div class="card">
+        <h2>Swagat hai chatron!</h2>
+        <p>Yahan aap maths aur science ki behtareen taiyari kar sakte hain. Upar diye gaye 'Online Test' vikalp se test dein ya admin panel ke madhyam se notes praapt karein.</p>
+      </div>
+    </div>
+
+    <!-- TEST SECTION -->
+    <div id="testSection" class="section hidden">
+      <div class="card">
+        <h2>CBSE Pattern Online Test</h2>
+        <form id="testForm" onsubmit="submitTest(event)">
+          <div class="form-group">
+            <label>Student Name:</label>
+            <input type="text" id="studentName" required>
+          </div>
+          <div class="form-group">
+            <label>Class:</label>
+            <select id="studentClass">
+              <option value="Class 9">Class 9</option>
+              <option value="Class 10">Class 10</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Subject:</label>
+            <select id="studentSubject">
+              <option value="Mathematics">Mathematics</option>
+              <option value="Science">Science</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Score:</label>
+            <input type="number" id="testScore" placeholder="Jaise: 18" required>
+          </div>
+          <div class="form-group">
+            <label>Total Marks:</label>
+            <input type="number" id="testTotal" placeholder="Jaise: 20" required>
+          </div>
+          <button type="submit" class="btn-submit">Submit Test Result</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ADMIN PANEL SECTION -->
+    <div id="adminPanelSection" class="section hidden">
+      <div class="card">
+        <h2>Admin File Manager</h2>
+        <div class="form-group">
+          <label>Upload File:</label>
+          <input type="file" id="fileInput">
+          <button onclick="uploadFile()" class="admin-btn" style="margin-top: 10px;">Upload to Drive</button>
+        </div>
+        <hr style="margin: 20px 0;">
+        <h3>Uploaded Files:</h3>
+        <div id="fileListContainer" style="margin-top: 15px;">
+          <p>Files load ho rahi hain...</p>
+        </div>
+        <button onclick="logoutAdmin()" style="margin-top: 20px; background: #d93025; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+      <h2>Admin Login</h2>
+      <form id="loginForm" onsubmit="handleLogin(event)" style="margin-top: 15px;">
+        <div class="form-group">
+          <label>Admin Email:</label>
+          <input type="email" id="adminEmail" required>
+        </div>
+        <div class="form-group">
+          <label>Password:</label>
+          <input type="password" id="adminPassword" required>
+        </div>
+        <button type="submit" class="btn-submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxeD-rQjBGjoLXz5kQ1MXMYNVmvRRMElDuee72nn3YuSFTDPqd1WcpzzE2b9QdCo5tnjg/exec';
+    let authToken = localStorage.getItem('divya_admin_token') || '';
+
+    function showSection(sectionName) {
+      document.getElementById('homeSection').classList.add('hidden');
+      document.getElementById('testSection').classList.add('hidden');
+      document.getElementById('adminPanelSection').classList.add('hidden');
+
+      if (sectionName === 'home') document.getElementById('homeSection').classList.remove('hidden');
+      if (sectionName === 'test') document.getElementById('testSection').classList.remove('hidden');
+      if (sectionName === 'admin') {
+        if (!authToken) {
+          openLoginModal();
+        } else {
+          document.getElementById('adminPanelSection').classList.remove('hidden');
+          loadFiles();
+        }
+      }
+    }
+
+    function openLoginModal() { document.getElementById('loginModal').style.display = 'flex'; }
+    function closeLoginModal() { document.getElementById('loginModal').style.display = 'none'; }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('adminEmail').value.trim();
+      const password = document.getElementById('adminPassword').value;
+
+      try {
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'login', email, password })
+        });
+        const text = await res.text();
+        const data = JSON.parse(text);
+
+        if (data.ok) {
+          authToken = data.token;
+          localStorage.setItem('divya_admin_token', authToken);
+          closeLoginModal();
+          showSection('admin');
+          alert('Login safal raha!');
+        } else {
+          alert('Login vifal: ' + data.error);
+        }
+      } catch (err) {
+        alert('Connection error: ' + err.message);
+      }
+    }
+
+    function logoutAdmin() {
+      authToken = '';
+      localStorage.removeItem('divya_admin_token');
+      showSection('home');
+      alert('Aap logout ho gaye hain.');
+    }
+
+    async function submitTest(e) {
+      e.preventDefault();
+      const name = document.getElementById('studentName').value;
+      const cls = document.getElementById('studentClass').value;
+      const sub = document.getElementById('studentSubject').value;
+      const score = Number(document.getElementById('testScore').value);
+      const total = Number(document.getElementById('testTotal').value);
+      const percent = ((score / total) * 100).toFixed(2);
+
+      const payload = {
+        action: 'saveTestResult',
+        token: authToken,
+        result: {
+          submitted: new Date().toLocaleString(),
+          name: name,
+          cls: cls,
+          sub: sub,
+          score: score,
+          total: total,
+          percent: percent + '%',
+          performance: percent >= 60 ? 'Good' : 'Needs Improvement'
+        }
+      };
+
+      try {
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+        const text = await res.text();
+        const data = JSON.parse(text);
+
+        if (data.ok) {
+          alert('Aapka test result safaltapurvak save ho gaya hai!');
+          document.getElementById('testForm').reset();
+        } else {
+          alert('Error: ' + data.error);
+        }
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+
+    async function loadFiles() {
+      const container = document.getElementById('fileListContainer');
+      container.innerHTML = '<p>Load ho raha hai...</p>';
+      try {
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'list', token: authToken })
+        });
+        const text = await res.text();
+        const data = JSON.parse(text);
+
+        if (data.ok) {
+          if (data.files.length === 0) {
+            container.innerHTML = '<p>Koi file uplabdh nahi hai.</p>';
+            return;
+          }
+          let html = '';
+          data.files.forEach(file => {
+            html += `<div class="file-item">
+              <span>${file.name}</span>
+              <div class="file-actions">
+                <a href="${file.url}" target="_blank"><button>View</button></a>
+                <button onclick="deleteFile('${file.id}')" style="background:#d93025; color:white; border:none;">Delete</button>
+              </div>
+            </div>`;
+          });
+          container.innerHTML = html;
+        } else {
+          container.innerHTML = '<p>Load karne mein vifal: ' + data.error + '</p>';
+          if(data.error.includes('expired')) logoutAdmin();
+        }
+      } catch (err) {
+        container.innerHTML = '<p>Error: ' + err.message + '</p>';
+      }
+    }
+
+    async function uploadFile() {
+      const fileInput = document.getElementById('fileInput');
+      if (fileInput.files.length === 0) {
+        alert('Kripya pehle ek file chunein!');
+        return;
+      }
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+
+      reader.onload = async function() {
+        const base64Data = reader.result;
+        try {
+          alert('File upload ho rahi hai, kripya prateeksha karein...');
+          const res = await fetch(SCRIPT_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({
+              action: 'upload',
+              token: authToken,
+              name: file.name,
+              mimeType: file.type,
+              data: base64Data
+            })
+          });
+          const text = await res.text();
+          const data = JSON.parse(text);
+
+          if (data.ok) {
+            alert('File safaltapurvak upload ho gayi!');
+            fileInput.value = '';
+            loadFiles();
+          } else {
+            alert('Upload vifal: ' + data.error);
+          }
+        } catch (err) {
+          alert('Error: ' + err.message);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    async function deleteFile(fileId) {
+      if (!confirm('Kya aap vakai is file ko hatana chahte hain?')) return;
+      try {
+        const res = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'delete', token: authToken, id: fileId })
+        });
+        const text = await res.text();
+        const data = JSON.parse(text);
+
+        if (data.ok) {
+          alert('File hata di gayi hai.');
+          loadFiles();
+        } else {
+          alert('Hatane mein vifal: ' + data.error);
+        }
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    }
+  </script>
+</body>
+</html>
 
