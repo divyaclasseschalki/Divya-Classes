@@ -646,7 +646,7 @@ function printOurSamplePaper(){
    Set ADMIN_API_URL after deploying the Apps Script backend.
 */
 const ADMIN_API_URL = 'https://script.google.com/macros/s/AKfycbx9NCbytIL5RaIbk06zmnWFNAjLnRDCk56fWDHGLGImvHakyabPlX8RLPSaDCqhTTuA/exec';
-let adminToken = sessionStorage.getItem('divya_admin_token') || '';
+var adminToken = sessionStorage.getItem('divya_admin_token') || '';
 
 function openAdminManager(){
   document.getElementById('adminModal').classList.add('show');
