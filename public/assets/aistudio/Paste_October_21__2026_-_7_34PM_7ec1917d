@@ -1,0 +1,1446 @@
+MASTER PROMPT — BUILD THE COMPLETE AI-POWERED DIVYA CLASSES EDUCATION WEBSITE
+1. YOUR ROLE AND MAIN OBJECTIVE
+
+Act as a senior full-stack developer, UI/UX designer, database architect, AI engineer, cybersecurity specialist, education technology expert, and software tester.
+
+Build a complete, professional, modern, responsive, secure, and production-ready education platform for Divya Classes, serving students in Classes 9 and 10 under CBSE and Bihar Board (BSEB).
+
+This must be a real, functional application, not just a static website or visual prototype.
+
+Implement the frontend, backend, database, authentication, student portal, admin dashboard, syllabus library, study materials, online examinations, automatic scoring, AI question paper generation, admissions, results, monthly leaderboard, certificates, PDF downloads, YouTube classes, Google Sheets reporting, and administrative tools.
+
+Most important instruction: Preserve my existing code
+
+I already have an existing React and TypeScript application with an Admin Dashboard component called AdminDashboardPage.tsx.
+
+Before modifying anything:
+
+Inspect the entire existing project.
+Identify the frontend framework, backend, API routes, database, authentication system, components, dependencies, and current functionality.
+Identify the existing admin login implementation and credentials configuration.
+Identify which features already work and which are incomplete.
+Inspect existing environment variables and database configuration without exposing secrets.
+Check whether the teacher photograph and board logos are already available in the project.
+
+Do not unnecessarily rewrite, replace, delete, or redesign my existing code.
+
+Preserve existing components, styling, APIs, types, functionality, and business logic wherever possible. Make the smallest necessary changes, adding new files or components when appropriate.
+
+Do not silently remove working features. If a database migration or API change is necessary, explain it and update all affected code.
+
+If the existing architecture differs from the recommended architecture in this prompt, adapt to the current project unless there is a demonstrated technical reason to migrate.
+
+Do not merely provide instructions or a proposed design. Work on the actual supplied project files, implement the features, run available tests, fix errors, and explain any remaining limitations.
+
+Never claim a feature is complete until it has been implemented and tested.
+
+2. OFFICIAL INSTITUTE INFORMATION
+
+Use these details consistently throughout the website.
+
+Institute name: Divya Classes
+Teacher: Dipak Kumar, also known as Dipak Sir
+Location: Chalki, Begusarai, Bihar, India
+Contact number: 9065892913
+School teaching experience: 5 years
+Coaching teaching experience: 7 years
+Classes: 9 and 10
+Supported boards: CBSE and Bihar Board (BSEB)
+Main subjects: Mathematics and Science
+YouTube channel: https://www.youtube.com/@EASYSCIENCE-j3w
+Latitude: 25.714056
+Longitude: 86.051528
+
+Google Maps link:
+
+https://www.google.com/maps?q=25.714056,86.051528
+
+Do not invent academic qualifications, awards, student results, pass percentages, testimonials, fees, batch schedules, or institutional affiliations.
+
+Only display additional information after the administrator has configured and verified it.
+
+3. BRANDING, LOGO, AND OFFICIAL BOARD LOGOS
+
+Create a consistent, professional educational identity for Divya Classes.
+
+Use:
+
+Deep navy blue.
+Royal blue.
+White.
+Golden-yellow accents.
+Clean, readable typography.
+Subtle gradients.
+Professional education-related illustrations.
+Consistent cards, spacing, shadows, and icons.
+A distinctive book-and-graduation-cap logo.
+
+Create a reusable Divya Classes logo asset suitable for:
+
+Website header and footer.
+Favicon.
+Student dashboard.
+Admin dashboard.
+PDF question papers.
+Sample papers.
+Certificates.
+Downloadable educational resources.
+Official CBSE and Bihar Board logos
+
+Use the genuine official CBSE logo and the genuine Bihar School Examination Board (BSEB) logo.
+
+Verify each logo using the relevant official board website or official publication.
+
+Official sources:
+
+CBSE: https://www.cbse.gov.in/
+
+CBSE Academic: https://cbseacademic.nic.in/
+
+Bihar Board secondary resources: https://secondary.biharboardonline.com/
+
+Requirements:
+
+Prefer official downloadable assets or assets from official publications.
+Preserve the correct appearance and proportions of each logo.
+Do not redraw or fabricate an official logo.
+Do not imply that Divya Classes is officially affiliated with or endorsed by either board.
+Use board logos on relevant course pages, syllabus pages, practice tests, and educational documents where appropriate.
+Use the Divya Classes logo as the institute's own brand.
+If an official logo cannot be verified or obtained, explain the limitation instead of pretending it has been added.
+
+Display the board identity clearly wherever students select CBSE or Bihar Board.
+
+4. DIPAK SIR'S EXACT SUPPLIED PHOTOGRAPH
+
+The owner has supplied this photograph:
+
+WhatsApp Image 2026-10-21 at 4.09.44 PM.jpeg
+
+Use this exact original photograph for Dipak Sir wherever his portrait is needed.
+
+Display it in:
+
+Homepage hero or teacher introduction.
+About Dipak Sir page.
+Teacher profile.
+Teaching approach section.
+Relevant course pages.
+Admission or contact page where appropriate.
+
+Requirements:
+
+Use the actual supplied file.
+Do not replace it with an AI-generated face, stock image, or unrelated photograph.
+Do not invent a photograph if the file is unavailable.
+Maintain the natural aspect ratio.
+Use responsive sizing and professional cropping.
+Optimize image loading without visibly damaging quality.
+Add descriptive alternative text.
+Use consistent styling across the website.
+
+If the file is missing from the project, ask the owner to upload it.
+
+5. WEBSITE DESIGN AND USER EXPERIENCE
+
+Build an attractive, modern, mobile-first website that works on:
+
+Mobile phones.
+Tablets.
+Desktop computers.
+Different screen sizes and browsers.
+
+Use the existing React and TypeScript stack where practical.
+
+Use the project's existing styling system where possible. If Tailwind CSS is already installed, preserve and reuse it.
+
+Provide:
+
+Responsive layouts.
+Consistent typography.
+Readable educational content.
+Accessible colors and contrast.
+Subtle animations.
+Clear loading indicators.
+Helpful empty states.
+Useful error messages.
+Confirmation dialogs for destructive actions.
+Keyboard accessibility.
+Visible focus indicators.
+Search, sorting, filtering, and pagination where appropriate.
+Light and dark themes.
+Fast-loading images and pages.
+Proper mobile navigation.
+Accessible form labels and validation.
+Reusable UI components.
+
+Avoid excessive animations, clutter, unnecessary popups, and oversized decorative elements.
+
+Every displayed button, form, navigation item, and action must work or be clearly marked as unavailable or coming soon.
+
+6. COMPLETE HINDI AND ENGLISH LANGUAGE SUPPORT
+
+Provide a language switcher with:
+
+English.
+हिन्दी.
+
+The language selector must work throughout the entire application.
+
+Translate all interface elements, including:
+
+Navigation.
+Homepage.
+Course descriptions.
+Forms.
+Syllabus.
+Study material labels.
+Test instructions.
+Questions and answer options when translated content exists.
+Results.
+Certificates.
+Student dashboard.
+Admin dashboard.
+Upload forms.
+Announcements.
+Error messages.
+Validation messages.
+Buttons and notifications.
+
+Requirements:
+
+Save the user's preferred language.
+Restore the preference on subsequent visits.
+Support Unicode Hindi text correctly.
+Use suitable Hindi-compatible fonts.
+Ensure generated PDFs render Hindi text correctly.
+Allow students to choose Hindi or English for AI-generated practice papers.
+Do not silently translate official documents and present the translation as an official publication.
+Preserve the original content when a translation is unavailable.
+Never translate names, marks, dates, IDs, or technical identifiers incorrectly.
+Keep language selection independent of the board selection.
+
+Use a maintainable translation dictionary or localization library instead of duplicating entire pages.
+
+7. WEBSITE NAVIGATION
+
+Include these pages:
+
+Home.
+About Divya Classes.
+Meet Dipak Sir.
+Courses.
+CBSE Class 9.
+CBSE Class 10.
+Bihar Board Class 9.
+Bihar Board Class 10.
+CBSE Syllabus.
+Bihar Board Syllabus.
+Study Materials.
+Online Tests.
+Sample Papers.
+Results.
+Monthly Leaderboard.
+Certificates.
+YouTube Classes.
+Admission Enquiry.
+Contact Us.
+Student Registration.
+Student Login.
+Student Dashboard.
+Admin Login.
+Admin Dashboard.
+Certificate Verification.
+Privacy Policy.
+Terms of Use.
+Custom Not Found page.
+
+Place less frequently used options, especially Admin Login, discreetly inside the navigation menu or footer utilities.
+
+Keep Student Login accessible in the main navigation.
+
+Use appropriate routes and access controls.
+
+Do not rely on hiding a navigation link to protect private pages.
+
+8. HOMEPAGE
+
+Create a polished homepage with this headline:
+
+"Learn Better. Practice Smarter. Achieve More with Divya Classes."
+
+Supporting text:
+
+"Prepare for CBSE and Bihar Board examinations with concept-focused Maths and Science teaching, chapter-wise study resources, practice tests, AI-generated question papers, and performance tracking."
+
+Display Dipak Sir's actual supplied photograph.
+
+Include prominent actions:
+
+Start Online Test.
+Explore Syllabus.
+Download Sample Papers.
+Watch YouTube Classes.
+Join Divya Classes.
+
+Display:
+
+Divya Classes branding.
+CBSE and Bihar Board identities.
+Class 9 and Class 10 course cards.
+Mathematics and Science cards.
+Available educational resources.
+Latest announcements.
+Available sample papers.
+Recent YouTube lessons when configured.
+Admission enquiry section.
+Teacher introduction.
+Contact information.
+Footer with useful links.
+Genuine statistics only
+
+If public statistics are displayed, calculate them from real database records.
+
+Never show invented student counts, fake success rates, fictitious testimonials, fabricated rankings, or fake achievements.
+
+If real statistics are unavailable, omit the numerical counters or clearly label development/demo data.
+
+9. ABOUT DIVYA CLASSES AND DIPAK SIR
+
+Create an About Divya Classes page and a dedicated About Dipak Sir page.
+
+Use the supplied photograph and these facts:
+
+Dipak Kumar, known as Dipak Sir.
+5 years of school teaching experience.
+7 years of coaching experience.
+Focus on Classes 9 and 10.
+Mathematics and Science.
+CBSE and Bihar Board support.
+
+Suggested introduction:
+
+"Meet Dipak Kumar, known to students as Dipak Sir, the teacher behind Divya Classes. With 5 years of school teaching experience and 7 years of coaching experience, he focuses on helping students develop clear concepts, practise systematically, and prepare confidently for examinations."
+
+Mathematics teaching approach
+
+Display:
+
+Step-by-step problem-solving.
+Conceptual understanding.
+Formula application.
+Numerical practice.
+Calculation accuracy.
+Chapter-wise exercises.
+Board-style questions.
+Revision and mistake analysis.
+Science teaching approach
+
+Display:
+
+Physics, Chemistry, and Biology concepts.
+Scientific reasoning.
+Definitions and diagrams.
+Numerical problems where relevant.
+Real-world applications.
+MCQ and assertion–reason practice.
+Short-answer and long-answer writing.
+Chapter revision.
+
+Describe these as teaching methods and goals, not guaranteed outcomes.
+
+10. COURSES AND CLASS MANAGEMENT
+
+Create separate course pages for:
+
+CBSE Class 9.
+CBSE Class 10.
+Bihar Board Class 9.
+Bihar Board Class 10.
+
+Each course page should show:
+
+Board and official board logo.
+Class.
+Available subjects.
+Academic session.
+Syllabus and chapters.
+Learning resources.
+Practice tests.
+Sample papers.
+Learning objectives.
+Admission enquiry button.
+Configured batch information.
+
+Allow the admin to configure:
+
+Fees.
+Batch schedules.
+Class timings.
+Course duration.
+Online or offline availability.
+Enrollment availability.
+Course descriptions.
+
+Do not invent fees, schedules, or course availability.
+
+Hide unconfigured fields or display an appropriate "Contact us for details" message.
+
+11. COMPLETE SYLLABUS LIBRARY
+
+Build a searchable syllabus library for CBSE and Bihar Board.
+
+Selection fields:
+
+Board.
+Class.
+Academic session.
+Subject.
+Chapter.
+Language where available.
+
+Support configurable subjects, including:
+
+Mathematics.
+Science.
+Social Science.
+English.
+Hindi.
+Sanskrit where applicable.
+Computer or Information Technology where offered.
+Additional subjects configured by the administrator.
+
+For Science, organize relevant topics into Physics, Chemistry, and Biology.
+
+For Social Science, organize relevant topics into History, Geography, Political Science, and Economics where appropriate.
+
+Support CBSE Information Technology subject code 402 when applicable to the selected class and academic session.
+
+For each chapter, provide:
+
+Chapter title.
+Description.
+Learning objectives.
+Completion status.
+Notes and resources.
+Practice tests.
+Sample paper links.
+Available PDF downloads.
+Chapter progress.
+
+Use these chapter statuses:
+
+Not Started.
+In Progress.
+Completed.
+
+Display progress based on genuine saved student activity.
+
+Verify official syllabus information using:
+
+CBSE Academic: https://cbseacademic.nic.in/
+
+Bihar Board: https://secondary.biharboardonline.com/
+
+Do not invent official chapters, subject codes, or session information.
+
+Distinguish official documents from teacher-created educational resources.
+
+Provide admin tools to add, edit, publish, unpublish, and update syllabus information.
+
+12. STUDENT REGISTRATION AND AUTHENTICATION
+
+Implement secure student authentication.
+
+Registration fields:
+
+Full name.
+Email address or phone number.
+Password or trusted authentication method.
+Board.
+Class.
+Preferred language.
+Optional parent or guardian contact.
+
+Generate a unique student ID.
+
+Provide:
+
+Student registration.
+Login.
+Logout.
+Password recovery.
+Secure sessions.
+Profile editing.
+Account settings.
+Student dashboard.
+Test history.
+Syllabus progress.
+Saved resources.
+Results.
+Certificates.
+Performance reports.
+
+Students must only access their own private records and permitted public content.
+
+Validate authorization on the server for every sensitive request.
+
+Never store plaintext passwords.
+
+Use a trusted authentication provider or secure password hashing.
+
+Implement appropriate privacy safeguards for school-age students.
+
+13. SECURE ADMIN LOGIN
+
+Configure the authorized administrator email as:
+
+**divyaclasses@gmail.com**
+
+This email must be configured in the backend or trusted authentication settings, not hardcoded as the sole authorization check in a public React component.
+
+The administrator password must be configured privately through secure environment variables or the authentication provider.
+
+Do not invent, expose, print, or display an admin password.
+
+Do not use a publicly documented default password.
+
+Security requirements
+
+Implement:
+
+Server-side authentication.
+Admin email allowlist.
+Role-based permissions.
+No public admin registration.
+Secure password hashing or managed authentication.
+Password reset.
+Secure sessions.
+Session expiration.
+Rate limiting.
+Optional two-factor authentication.
+Audit logs.
+Server-side protection for every admin route and API.
+Protection against unauthorized access even when a user manually enters the admin URL.
+
+Never rely on frontend checks alone.
+
+Existing login discovery
+
+Inspect the existing project to identify how admin login currently works.
+
+If an existing authentication system is functional, preserve and secure it instead of creating a conflicting second system.
+
+If no admin account exists, provide a secure one-time setup or administrator provisioning procedure.
+
+If the current login credentials are stored in environment variables, identify the variable names and explain where the owner can configure them. Never print actual secrets in logs or website content.
+
+14. COMPLETE ADMIN DASHBOARD
+
+Preserve and improve the existing AdminDashboardPage.tsx rather than replacing it unnecessarily.
+
+Maintain existing functionality such as:
+
+Admission enquiry management.
+Test attempt records.
+Dashboard statistics.
+File uploads.
+Document deletion.
+AI question paper generation.
+CSV exports.
+Refresh functionality.
+Sign out.
+Existing API integration.
+
+Add missing functionality using the current project architecture.
+
+Admin overview dashboard
+
+Display real, database-backed statistics for:
+
+Total registered students.
+Unique students who have taken at least one test.
+Total valid test attempts.
+Total completed tests.
+Total published tests.
+Total admission applications.
+Pending admission applications.
+Contacted admission enquiries.
+Enrolled students.
+Total uploaded documents.
+Total sample papers.
+Total published AI-generated papers.
+Average marks or percentage.
+Board-wise participation.
+Class-wise participation.
+Subject-wise participation.
+Monthly registrations.
+Paper downloads.
+Certificates issued.
+
+Clearly distinguish students, attempts, and completed tests.
+
+Prevent duplicate submissions from inflating statistics.
+
+Display charts and cards with appropriate filters and date ranges.
+
+Every statistic must come from real database records.
+
+Student management
+
+Allow authorized administrators to:
+
+Search students.
+View student profiles.
+Filter by board and class.
+View test history.
+View final scores.
+Review syllabus progress.
+Update permitted profile fields.
+Manage account status.
+Export authorized records.
+
+Protect sensitive personal information.
+
+Admission management
+
+Display all genuine admission enquiries.
+
+Show:
+
+Student name.
+Contact information.
+Board.
+Class.
+Subjects.
+Application date.
+Current status.
+Relevant notes.
+
+Allow authorized administrators to:
+
+Search and filter applications.
+Mark applications Pending, Contacted, Enrolled, or Archived.
+Update records.
+Export CSV.
+Follow up on enquiries.
+
+Never expose private admission records publicly.
+
+Test management
+
+Allow the admin to:
+
+Create tests.
+Edit tests.
+Schedule tests.
+Configure duration.
+Configure marks.
+Configure question types.
+Configure language.
+Add or edit questions.
+Review answer keys.
+Publish and unpublish tests.
+Review attempts.
+Review subjective answers.
+Correct marks.
+Release results.
+Export results.
+Search and filtering
+
+Add suitable search, filters, pagination, and sorting to long tables.
+
+Provide loading, empty, success, and error states.
+
+Use confirmation dialogs for destructive operations.
+
+15. ADMIN FILE, IMAGE, VIDEO, AND DOCUMENT UPLOADS
+
+After logging into the admin dashboard, the administrator must be able to upload and manage educational resources.
+
+Support:
+
+PDF files.
+JPG and JPEG images.
+PNG images.
+Other explicitly approved image formats.
+MP4 and WebM videos where supported.
+YouTube video links.
+Study notes.
+Sample papers.
+Syllabus documents.
+Classroom photographs.
+Notices.
+Exam schedules.
+Educational illustrations.
+Other configured document types.
+Upload form fields
+Resource title.
+Description.
+Resource category.
+Board.
+Class.
+Subject.
+Chapter where applicable.
+Academic session.
+Language.
+File or video URL.
+Publication status.
+
+Allow the administrator to:
+
+Upload files.
+Preview images and supported documents.
+Add and edit metadata.
+Publish or unpublish resources.
+Replace files.
+Delete resources with confirmation.
+Search and filter existing uploads.
+See upload status and errors.
+View file size and upload date.
+Secure storage
+
+Use the project's existing storage system or a suitable private object-storage service.
+
+Requirements:
+
+Validate file types on the server.
+Enforce file size limits.
+Use safe filenames.
+Restrict uploads to authorized administrators.
+Prevent executable files and malicious uploads.
+Store private files privately.
+Use signed URLs or controlled access where necessary.
+Avoid placing large Base64 files directly into database records.
+Handle upload failures safely.
+Clean up orphaned files where appropriate.
+
+Make published resources available to the intended students.
+
+Keep private administrative documents restricted.
+
+16. STUDENT DASHBOARD
+
+Create a personalized dashboard displaying:
+
+Student name and ID.
+Board and class.
+Preferred language.
+Available courses.
+Recent tests.
+Completed tests.
+Latest results.
+Subject-wise performance.
+Syllabus progress.
+Saved resources.
+Upcoming scheduled tests.
+Available certificates.
+Recent announcements.
+Recommended revision topics.
+Links to sample papers and YouTube classes.
+
+Show only data belonging to the logged-in student, except for explicitly public information.
+
+Use real records and meaningful empty states.
+
+17. GUIDED ONLINE TEST FLOW
+
+When a student clicks Start Online Test, guide them through the following sequence:
+
+Select CBSE or Bihar Board.
+Select Class 9 or Class 10.
+Select the academic session.
+Select an available subject.
+Select an available test date or practice test.
+Select the test type.
+Select the chapter or syllabus coverage when relevant.
+Select the language where available.
+Select difficulty where appropriate.
+Review instructions, duration, total marks, and question count.
+Log in before saving an attempt to the student's account.
+Start the test.
+
+Test types:
+
+Chapter-wise practice test.
+Full-syllabus test.
+Scheduled examination.
+AI-generated test.
+Sample paper test.
+Revision test.
+
+Display only subjects, dates, and tests that are actually configured and available.
+
+Custom dates may be used for practice tests only when enabled by the administrator.
+
+18. ONLINE EXAMINATION ENGINE
+
+Implement a functional examination interface with:
+
+Countdown timer.
+Question navigation.
+Previous and Next.
+Mark for Review.
+Clear Answer.
+Saved answers.
+Autosave.
+Question palette.
+Attempt status.
+Submission confirmation.
+Automatic submission on timeout.
+Duplicate-submission protection.
+Mobile-friendly layout.
+Result display according to configured release rules.
+
+Store valid attempts in the database.
+
+Use server-side validation to prevent users from modifying marks, answer keys, question values, or submitted results.
+
+Handle refreshes and temporary network interruptions safely.
+
+Default Divya Classes CBSE Class 10 practice format
+
+Configure the following as an editable practice-test template:
+
+Questions 1–10: 10 MCQs, 1 mark each.
+Questions 11–15: 5 Assertion–Reason questions, 1 mark each.
+Questions 16–18: 3 short-answer questions, 2 marks each.
+Questions 19–20: 2 long-answer questions, 3 marks each.
+
+Total: 20 questions and 25 marks.
+
+This is a Divya Classes practice-test format, not a claim about the official CBSE board examination pattern.
+
+Let the administrator customize it by subject, class, and test.
+
+Bihar Board examination format
+
+Provide separate configurable settings for:
+
+Question count.
+Question types.
+Marks per question.
+Total marks.
+Duration.
+Negative marking.
+Answer-key release.
+Subject-specific rules.
+
+Do not assume CBSE and Bihar Board use identical formats.
+
+19. AUTOMATIC RESULTS AND MARKING
+
+After valid submission:
+
+Score objective questions automatically.
+Calculate marks obtained.
+Calculate maximum marks.
+Calculate percentage.
+Count correct and incorrect answers.
+Count unanswered questions.
+Calculate accuracy where meaningful.
+Store answers and results.
+Display results to the correct student.
+Provide explanations when released.
+Track historical progress.
+Show subject-wise performance.
+Subjective marking
+
+For short and long answers:
+
+Support configurable marking rubrics.
+Support teacher review.
+Optionally provide AI-assisted marking suggestions.
+Clearly label AI-assessed scores as provisional.
+Allow authorized teachers to edit marks.
+Preserve the original score and answer.
+Store teacher corrections and final scores.
+Publish final results only according to the configured review policy.
+
+Allow the admin to configure pass marks and release dates.
+
+Never present an unreviewed AI assessment as a teacher-approved final result.
+
+20. AI QUESTION PAPER GENERATOR
+
+Extend the existing Gemini-based AI generator if it already works.
+
+Do not remove existing functionality unnecessarily.
+
+Provide inputs for:
+
+Board.
+Class.
+Academic session.
+Subject.
+Chapter or chapters.
+Language.
+Question count.
+Question types.
+Difficulty.
+Total marks.
+Duration.
+Syllabus reference.
+Answer-key preference.
+Explanation preference.
+
+Generate:
+
+MCQs.
+Assertion–Reason questions.
+Very short answers.
+Short answers.
+Long answers.
+Numerical problems.
+Diagram-based questions where appropriate.
+Chapter-wise practice tests.
+Full-syllabus practice tests.
+Revision tests.
+Mock examinations.
+AI quality controls
+Use the correct selected curriculum.
+Avoid mixing CBSE and Bihar Board syllabuses.
+Validate question counts and total marks.
+Check for repeated questions.
+Validate answer keys where possible.
+Generate explanations where requested.
+Support Hindi and English.
+Allow editing and regeneration.
+Save drafts.
+Require administrator approval before publication.
+Clearly label AI-generated practice papers.
+Never falsely label generated questions as official previous-year questions.
+Handle provider errors and API limits.
+Keep AI API keys exclusively on the server.
+Log failures without exposing secrets.
+21. SAMPLE PAPERS AND PDF DOWNLOADS
+
+Create a searchable Sample Papers library.
+
+Filters:
+
+Board.
+Class.
+Academic session.
+Subject.
+Chapter.
+Paper type.
+Language.
+
+Support:
+
+Official CBSE sample papers.
+Official Bihar Board sample papers.
+Verified previous-year papers.
+Divya Classes sample papers.
+AI-generated practice papers.
+Answer keys.
+Solution PDFs.
+
+Official sources:
+
+CBSE Academic: https://cbseacademic.nic.in/
+
+Bihar Board: https://secondary.biharboardonline.com/
+
+Verify direct document links before labeling a paper official.
+
+If a direct official PDF URL cannot be verified, link to the official source page instead.
+
+Allow the administrator to upload papers and configure:
+
+Title.
+Board.
+Class.
+Subject.
+Academic session.
+Language.
+Paper date.
+Total marks.
+Duration.
+Answer key.
+Solution PDF.
+Publication status.
+
+Generate branded PDFs for institute-created papers, including the Divya Classes logo and relevant metadata.
+
+Use Hindi-compatible PDF fonts when needed.
+
+Provide download buttons and mobile-friendly previews.
+
+Track genuine download events without collecting unnecessary personal information.
+
+22. MONTHLY TOP FIVE LEADERBOARD
+
+Build a monthly leaderboard displaying the five highest-performing eligible students.
+
+Display:
+
+Rank.
+Approved public display name.
+Board.
+Class.
+Score or percentage.
+Number of eligible completed tests.
+Month and year.
+
+Use gold, silver, and bronze accents for the top three positions.
+
+Ranking rules
+Use finalized, genuine test results.
+Use a documented and configurable formula.
+Prefer average percentage across eligible completed tests.
+Allow the admin to configure minimum attempts.
+Define consistent tie-breaking rules.
+Exclude duplicate or disqualified attempts.
+Recalculate after authorized score corrections.
+Preserve historical monthly snapshots where appropriate.
+Provide current and previous month views.
+
+If fewer than five students qualify, display only the actual qualifying students.
+
+Never fabricate student names, scores, ranks, or participation counts.
+
+Never expose phone numbers, email addresses, or private student records on the leaderboard.
+
+Provide appropriate privacy controls for students who should not be publicly identified.
+
+23. CERTIFICATE GENERATION
+
+Generate downloadable PDF certificates for eligible achievements:
+
+First Rank.
+Second Rank.
+Third Rank.
+Participation.
+
+Each certificate should contain:
+
+Divya Classes logo.
+Institute name.
+Student name.
+Board and class where appropriate.
+Subject or competition.
+Test or event name.
+Achievement or rank.
+Score where appropriate.
+Issue date.
+Unique certificate ID.
+Dipak Kumar as authorized teacher.
+Authorized signature if supplied.
+QR code or verification URL.
+
+Requirements:
+
+Issue certificates only to eligible students.
+Prevent duplicate certificates for the same achievement.
+Allow admin review, approval, revocation, and reissue.
+Generate print-ready PDFs.
+Provide download history.
+Create a certificate verification page.
+Validate the certificate ID against the database.
+Do not generate fake achievements.
+Do not create an official board certificate or imply board endorsement.
+24. YOUTUBE CLASSES
+
+Use the supplied channel:
+
+https://www.youtube.com/@EASYSCIENCE-j3w
+
+Create a YouTube Classes page containing:
+
+Channel introduction.
+Subscribe link.
+Embedded videos.
+Class 9 and Class 10 categories.
+Maths and Science categories.
+Playlists where available.
+Chapter-wise video organization.
+Search and filtering where practical.
+
+Allow the admin to add, edit, organize, publish, and remove video and playlist links.
+
+Support manual link management even if YouTube API credentials are unavailable.
+
+Use official YouTube embeds.
+
+Only display verified video titles, thumbnails, and dates.
+
+Do not invent channel statistics or video content.
+
+25. ADMISSIONS AND CONTACT
+
+Create a Contact Us and Admission page.
+
+Display:
+
+Divya Classes.
+Dipak Kumar.
+Chalki, Begusarai, Bihar, India.
+Contact number: 9065892913.
+Google Maps location.
+Click-to-call button.
+WhatsApp enquiry button.
+Admission form.
+Frequently asked questions.
+
+Admission form fields:
+
+Student name.
+Contact details.
+Board.
+Class.
+Subjects.
+Preferred batch if configured.
+Preferred class format if offered.
+Message or question.
+
+Validate submissions and store them securely.
+
+Provide admin tools to:
+
+View applications.
+Search and filter.
+Update status.
+Add internal follow-up notes.
+Contact applicants.
+Export CSV.
+
+Never expose admission records publicly.
+
+Do not automatically send messages unless the relevant service is configured and the required permissions have been obtained.
+
+26. ANNOUNCEMENTS AND NOTIFICATIONS
+
+Allow authorized administrators to publish:
+
+New batches.
+Test schedules.
+Exam dates.
+Holidays.
+New sample papers.
+New study materials.
+Result publication.
+Certificate availability.
+Important class updates.
+
+Support:
+
+Create.
+Edit.
+Publish.
+Schedule.
+Archive.
+Delete with confirmation.
+
+Display recent announcements on the homepage and student dashboard.
+
+Implement in-app notifications where appropriate.
+
+Add email or WhatsApp notifications only when a real provider is configured.
+
+Track notification delivery status when supported.
+
+27. GOOGLE SHEETS REPORTING
+
+Integrate Google Sheets through a secure server-side API integration.
+
+Create configurable reports for:
+
+Student registration records.
+Admission enquiries.
+Test attempts.
+Finalized results.
+Monthly leaderboards.
+Certificates.
+Paper download statistics.
+
+Requirements:
+
+Keep credentials private.
+Use unique record IDs.
+Prevent duplicate rows.
+Track synchronization status.
+Retry failed synchronization safely.
+Provide manual resynchronization.
+Log integration errors.
+Provide CSV exports.
+
+The database remains the primary source of truth.
+
+If Google Sheets is not configured, the website must continue working and clearly indicate that synchronization is unavailable.
+
+Do not claim synchronization is active until it has been tested successfully.
+
+28. DATABASE AND ARCHITECTURE
+
+First inspect the existing database and backend.
+
+Preserve them when practical.
+
+If a database is not yet configured, use PostgreSQL or a suitable managed database.
+
+Recommended stack for a new implementation:
+
+Frontend: Next.js, React, TypeScript.
+Styling: Tailwind CSS and accessible components.
+Backend: secure server routes or server actions.
+Database: PostgreSQL.
+Authentication: Supabase Auth or equivalent.
+Storage: Supabase Storage or equivalent.
+AI: server-side LLM provider.
+PDFs: suitable server-side PDF library.
+Reporting: Google Sheets API.
+Deployment: secure hosting with HTTPS and backups.
+
+Do not introduce a complete framework migration without first evaluating the existing project.
+
+Required database entities
+
+Create or adapt tables for:
+
+Users.
+Student profiles.
+Admin roles.
+Boards.
+Classes.
+Subjects.
+Academic sessions.
+Syllabus chapters.
+Courses and batches.
+Study materials.
+Tests.
+Test configurations.
+Questions.
+Answer keys.
+Test attempts.
+Submitted answers.
+Provisional results.
+Teacher reviews.
+Final results.
+Leaderboard snapshots.
+Certificates.
+Sample papers.
+Downloads.
+Announcements.
+Admission enquiries.
+YouTube resources.
+Synchronization records.
+Retention policies.
+Audit logs.
+
+Use proper relationships, indexes, validation, migrations, and backups.
+
+Implement row-level security or equivalent authorization so students can access only their own private records.
+
+Administrators may access records according to their authorized roles.
+
+29. SECURITY AND PRIVACY
+
+Implement:
+
+HTTPS in production.
+Secure sessions.
+Server-side authorization.
+Password hashing or managed authentication.
+Secret management.
+Input validation.
+Protection against SQL injection.
+Cross-site scripting protections.
+CSRF protection where applicable.
+Rate limiting.
+Secure file handling.
+Restricted answer-key access.
+Database backups.
+Error logging.
+Audit logs.
+Account recovery.
+Appropriate protections for minors.
+Privacy policy.
+Terms of use.
+Account deletion and data request procedures.
+
+Never expose:
+
+Admin passwords.
+API keys.
+Service account private keys.
+Private student records.
+Unauthorized answers.
+Internal security configuration.
+
+Do not store secrets in public environment variables or frontend bundles.
+
+Do not put privileged service keys in browser code.
+
+30. STUDY PLANNER, BOOKMARKS, DOUBTS, AND FEEDBACK
+
+Add these features where practical without destabilizing the existing application.
+
+Study planner
+
+Allow students to create weekly study goals and mark chapters complete.
+
+Bookmarks
+
+Allow students to save and revisit study resources.
+
+Practice history
+
+Display recent tests, marks, and performance trends.
+
+Question review
+
+Allow students to review incorrect answers after the configured release time.
+
+Doubt submission
+
+Allow students to submit academic questions for authorized staff to review.
+
+Feedback
+
+Allow students to submit feedback, with moderation before public display.
+
+Global search
+
+Search relevant courses, subjects, chapters, resources, sample papers, and tests.
+
+Ensure all private information remains protected.
+
+31. DATA RETENTION AND BACKUPS
+
+Implement configurable retention policies for designated temporary data, such as expired sessions and disposable technical logs.
+
+Do not automatically delete important results, accounts, or certificates without an explicit retention policy and authorization.
+
+Before bulk deletion:
+
+Show the records affected.
+Show the record count.
+Request administrator confirmation.
+Record the action in the audit log.
+Provide recovery where feasible.
+
+Use scheduled server-side jobs for automated cleanup.
+
+Configure database backups and document recovery procedures.
+
+Do not claim that automated retention or backups are active until deployed and tested.
+
+32. SEARCH ENGINE OPTIMIZATION AND ACCESSIBILITY
+
+Add:
+
+Meaningful page titles.
+Meta descriptions.
+Social sharing metadata.
+Sitemap.
+Robots configuration.
+Suitable structured data.
+Accessible navigation.
+Semantic HTML.
+Keyboard navigation.
+Clear focus indicators.
+Readable text and contrast.
+Appropriate image alternative text.
+Accessible form validation.
+
+Use public indexing only for appropriate public pages.
+
+Do not expose private dashboards, student records, or administrative pages through search indexing.
+
+33. AUTOMATED TESTING AND ACCEPTANCE CRITERIA
+
+Before declaring the project complete, verify:
+
+The website works on mobile and desktop.
+The correct supplied teacher photograph is used.
+Genuine official board logos are used where verified.
+Hindi and English switching works across the website.
+Existing working features remain functional.
+Student registration and login work.
+Admin authentication works.
+Unauthorized users cannot access admin APIs.
+Students cannot access another student's private records.
+Board and class selection works.
+Subject selection follows the configured curriculum.
+Syllabus resources and links work.
+The configured 20-question practice test totals 25 marks.
+Bihar Board tests use their own configured format.
+Timer and autosave work.
+Objective questions are scored correctly.
+Subjective answers can be reviewed and corrected.
+Results are stored and shown to the correct student.
+Dashboard statistics match database records.
+Admission enquiries can be reviewed and updated.
+Authorized administrators can upload and delete resources.
+File uploads respect security and size limits.
+AI papers can be reviewed before publication.
+Sample paper downloads work.
+Leaderboard rankings use genuine finalized scores.
+Certificates are issued only to eligible students.
+Certificate verification works.
+YouTube links and embeds work.
+Google Sheets integration handles retries without duplicate records when configured.
+Database backups and retention jobs are documented and verified.
+Contact and map links work.
+API failures and empty states are handled correctly.
+No credentials or secrets are exposed.
+Essential automated tests pass.
+
+Add tests for authentication, authorization, exam scoring, duplicate submissions, result calculations, file uploads, and certificate eligibility.
+
+Do not claim tests pass unless they have actually been run.
+
+34. DELIVERY REQUIREMENTS
+
+Deliver:
+
+The complete working application.
+Responsive website and navigation.
+Divya Classes branding.
+Correct teacher photograph integration.
+Verified official board logos where available.
+Hindi and English support.
+Student registration and authentication.
+Secure admin login.
+Admin dashboard.
+Student management.
+Admission management.
+File, image, and video upload management.
+Syllabus library.
+Study materials.
+Online examination system.
+AI question paper generator.
+Automatic objective scoring.
+Teacher-reviewed subjective scoring.
+Results and progress reports.
+Monthly leaderboard.
+PDF certificates.
+Sample paper library.
+YouTube Classes.
+Google Sheets reporting.
+Database schema and migrations.
+Secure environment-variable template.
+README.
+Deployment instructions.
+External integration setup instructions.
+Automated tests for essential workflows.
+
+Provide a clear list of completed features, incomplete features, external services requiring credentials, and deployment tasks still outstanding.
+
+Final instruction
+
+Start by inspecting the actual existing project and preserving its current functionality.
+
+Implement the work in well-defined stages. Prioritize the secure foundation, existing admin dashboard, bilingual support, real database-backed statistics, student examinations, and secure uploads.
+
+Then implement the remaining features without breaking earlier stages.
+
+Use realistic development data only in a clearly labeled demo environment.
+
+Do not invent real students, marks, rankings, testimonials, official documents, or achievements.
+
+Do not pretend unavailable external services are operational.
+
+The final goal is a secure, attractive, bilingual, fully functional AI-powered education platform for Divya Classes, where students can learn and take tests, and the authorized administrator can log in to see how many students have taken tests, how many students have applied for admission, how students scored, and upload or manage educational files, images, videos, and documents.

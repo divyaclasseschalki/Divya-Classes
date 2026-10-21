@@ -1,0 +1,8 @@
+{
+  "name": "Divya Classes",
+  "description": "Complete AI-Powered Education Platform for Divya Classes (Class 9 & 10 CBSE & Bihar Board) by Dipak Sir (Begusarai, Bihar)",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
